@@ -7,13 +7,18 @@
 
 import UIKit
 
+
 class CommitListView: UIView {
     
     // MARK: - Properties
     
     let collectionView : UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        cv.backgroundColor = .white
+        cv.alwaysBounceVertical = true
         cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.register(CommitCell.self, forCellWithReuseIdentifier: CommitCell.cellIdentifier)
+        
         return cv
     } ()
     
@@ -24,7 +29,6 @@ class CommitListView: UIView {
         super.init(frame: frame)
         addSubViews()
         addConstraints()
-        collectionView.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {

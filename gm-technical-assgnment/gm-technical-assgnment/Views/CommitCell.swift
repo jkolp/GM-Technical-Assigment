@@ -10,7 +10,7 @@ import UIKit
 class CommitCell: UICollectionViewCell {
     
     // MARK: - Properties
-    
+    static public let cellIdentifier = "CommitCell"
     
     // MARK: - LifeCycle
     
