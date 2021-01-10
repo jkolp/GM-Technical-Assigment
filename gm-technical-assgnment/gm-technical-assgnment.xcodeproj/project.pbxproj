@@ -17,6 +17,7 @@
 		8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A03E25AA375E0018F81C /* CommitListView.swift */; };
 		8160A04225AA78960018F81C /* Constructible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A04125AA78950018F81C /* Constructible.swift */; };
 		81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */; };
+		81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5F425AAC01F002A4967 /* CommitProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8160A03E25AA375E0018F81C /* CommitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListView.swift; sourceTree = "<group>"; };
 		8160A04125AA78950018F81C /* Constructible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructible.swift; sourceTree = "<group>"; };
 		81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListDataSource.swift; sourceTree = "<group>"; };
+		81A6B5F425AAC01F002A4967 /* CommitProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,8 @@
 		8160A01E25AA294D0018F81C /* gm-technical-assgnment */ = {
 			isa = PBXGroup;
 			children = (
+				81A6B5F325AABFCC002A4967 /* Provider */,
+				81A6B5F225AABFBE002A4967 /* Facilitator */,
 				8160A01F25AA294D0018F81C /* AppDelegate.swift */,
 				8160A02125AA294D0018F81C /* SceneDelegate.swift */,
 				8160A04125AA78950018F81C /* Constructible.swift */,
@@ -101,6 +105,21 @@
 				81434C3C25AA7E1A009A965B /* CommitCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81A6B5F225AABFBE002A4967 /* Facilitator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Facilitator;
+			sourceTree = "<group>";
+		};
+		81A6B5F325AABFCC002A4967 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				81A6B5F425AAC01F002A4967 /* CommitProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +196,7 @@
 				8160A03825AA32510018F81C /* BaseViewController.swift in Sources */,
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,
+				81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */,
 				81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */,
 				81434C3D25AA7E1A009A965B /* CommitCell.swift in Sources */,
 				8160A02225AA294D0018F81C /* SceneDelegate.swift in Sources */,
