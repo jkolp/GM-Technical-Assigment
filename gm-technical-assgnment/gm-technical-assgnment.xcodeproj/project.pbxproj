@@ -16,6 +16,7 @@
 		8160A03825AA32510018F81C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A03725AA32510018F81C /* BaseViewController.swift */; };
 		8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A03E25AA375E0018F81C /* CommitListView.swift */; };
 		8160A04225AA78960018F81C /* Constructible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A04125AA78950018F81C /* Constructible.swift */; };
+		81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8160A03725AA32510018F81C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8160A03E25AA375E0018F81C /* CommitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListView.swift; sourceTree = "<group>"; };
 		8160A04125AA78950018F81C /* Constructible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructible.swift; sourceTree = "<group>"; };
+		81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				8160A01F25AA294D0018F81C /* AppDelegate.swift */,
 				8160A02125AA294D0018F81C /* SceneDelegate.swift */,
 				8160A04125AA78950018F81C /* Constructible.swift */,
+				81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */,
 				8160A03625AA314F0018F81C /* Common */,
 				8160A03B25AA36E00018F81C /* Views */,
 				8160A03A25AA36D60018F81C /* Controllers */,
@@ -174,6 +177,7 @@
 				8160A03825AA32510018F81C /* BaseViewController.swift in Sources */,
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,
+				81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */,
 				81434C3D25AA7E1A009A965B /* CommitCell.swift in Sources */,
 				8160A02225AA294D0018F81C /* SceneDelegate.swift in Sources */,
 			);
