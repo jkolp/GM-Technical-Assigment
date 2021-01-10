@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81434C3D25AA7E1A009A965B /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81434C3C25AA7E1A009A965B /* CommitCell.swift */; };
 		8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A01F25AA294D0018F81C /* AppDelegate.swift */; };
 		8160A02225AA294D0018F81C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A02125AA294D0018F81C /* SceneDelegate.swift */; };
 		8160A02425AA294D0018F81C /* CommitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A02325AA294D0018F81C /* CommitListViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81434C3C25AA7E1A009A965B /* CommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCell.swift; sourceTree = "<group>"; };
 		8160A01C25AA294D0018F81C /* gm-technical-assgnment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gm-technical-assgnment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8160A01F25AA294D0018F81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8160A02125AA294D0018F81C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8160A03E25AA375E0018F81C /* CommitListView.swift */,
+				81434C3C25AA7E1A009A965B /* CommitCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				8160A03825AA32510018F81C /* BaseViewController.swift in Sources */,
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,
+				81434C3D25AA7E1A009A965B /* CommitCell.swift in Sources */,
 				8160A02225AA294D0018F81C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
