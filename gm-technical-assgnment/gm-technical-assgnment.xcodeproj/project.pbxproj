@@ -60,12 +60,12 @@
 		8160A01E25AA294D0018F81C /* gm-technical-assgnment */ = {
 			isa = PBXGroup;
 			children = (
+				8160A01F25AA294D0018F81C /* AppDelegate.swift */,
+				8160A02125AA294D0018F81C /* SceneDelegate.swift */,
+				8160A04125AA78950018F81C /* Constructible.swift */,
 				8160A03625AA314F0018F81C /* Common */,
 				8160A03B25AA36E00018F81C /* Views */,
 				8160A03A25AA36D60018F81C /* Controllers */,
-				8160A04125AA78950018F81C /* Constructible.swift */,
-				8160A01F25AA294D0018F81C /* AppDelegate.swift */,
-				8160A02125AA294D0018F81C /* SceneDelegate.swift */,
 				8160A02825AA29500018F81C /* Assets.xcassets */,
 				8160A02A25AA29500018F81C /* LaunchScreen.storyboard */,
 				8160A02D25AA29500018F81C /* Info.plist */,

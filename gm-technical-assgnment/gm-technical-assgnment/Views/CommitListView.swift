@@ -7,8 +7,6 @@
 
 import UIKit
 
-let reuseIdentifier = "reuseIdentifier"
-
 class CommitListView: UIView {
     
     // MARK: - Properties
@@ -24,11 +22,29 @@ class CommitListView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        addSubViews()
+        addConstraints()
+        collectionView.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+// MARK: - UI Setup
+
+extension CommitListView: Constructible {
+
+    func addSubViews() {
+        addSubview(collectionView)
+    }
+    
+    func addConstraints() {
+        NSLayoutConstraint.activate([collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+                                     collectionView.leftAnchor.constraint(equalTo: leftAnchor),
+                                     collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+                                     collectionView.rightAnchor.constraint(equalTo: rightAnchor)])
+    }
 }
