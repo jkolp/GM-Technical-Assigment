@@ -18,7 +18,6 @@ class CommitListViewController: BaseViewController<CommitListView> {
         
         baseView.collectionView.dataSource = commitListDataSource
         baseView.collectionView.delegate = self
-
     }
 }
 

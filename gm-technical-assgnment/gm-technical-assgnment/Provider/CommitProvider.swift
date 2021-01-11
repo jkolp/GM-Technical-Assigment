@@ -37,8 +37,6 @@ protocol CommitProvider {
 class CommitListProvider: CommitProvider {
     
     private let baseURL = "https://api.github.com"
-    // https://api.github.com/repositories/328066542/commits
-    // https://api.github.com/repos/octocat/hello-world/commits
     
     init() {}
     

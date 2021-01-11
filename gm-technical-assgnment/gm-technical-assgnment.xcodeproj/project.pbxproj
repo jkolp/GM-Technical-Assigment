@@ -18,6 +18,7 @@
 		8160A04225AA78960018F81C /* Constructible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A04125AA78950018F81C /* Constructible.swift */; };
 		81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */; };
 		81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5F425AAC01F002A4967 /* CommitProvider.swift */; };
+		81A6B5F925AAD3EB002A4967 /* CommitFacilitator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5F825AAD3EB002A4967 /* CommitFacilitator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8160A04125AA78950018F81C /* Constructible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructible.swift; sourceTree = "<group>"; };
 		81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListDataSource.swift; sourceTree = "<group>"; };
 		81A6B5F425AAC01F002A4967 /* CommitProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitProvider.swift; sourceTree = "<group>"; };
+		81A6B5F825AAD3EB002A4967 /* CommitFacilitator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitFacilitator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		81A6B5F225AABFBE002A4967 /* Facilitator */ = {
 			isa = PBXGroup;
 			children = (
+				81A6B5F825AAD3EB002A4967 /* CommitFacilitator.swift */,
 			);
 			path = Facilitator;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				8160A02425AA294D0018F81C /* CommitListViewController.swift in Sources */,
 				8160A04225AA78960018F81C /* Constructible.swift in Sources */,
 				8160A03825AA32510018F81C /* BaseViewController.swift in Sources */,
+				81A6B5F925AAD3EB002A4967 /* CommitFacilitator.swift in Sources */,
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,
 				81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */,
