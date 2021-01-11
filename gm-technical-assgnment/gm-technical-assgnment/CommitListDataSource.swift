@@ -9,20 +9,21 @@ import UIKit
 
 class CommitListDataSource: NSObject, UICollectionViewDataSource {
     
-    private var commitList = [String]()
+    private var commitList = [CommitViewModel]()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return commitList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommitCell.cellIdentifier, for: indexPath) as! CommitCell
+        cell.configureCell(with: commitList[indexPath.item])
         
         return cell
     }
     
-    func setCommits(with list: [String]) {
+    func setCommits(with list: [CommitViewModel]) {
         commitList = list
     }
 }

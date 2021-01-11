@@ -7,6 +7,14 @@
 
 import UIKit
 
+struct CommitViewModel {
+    let avatarUrl: String
+    let commitHash: String
+    let author: String
+    let message: String
+    let commitUrl: String
+}
+
 class CommitCell: UICollectionViewCell {
     
     // MARK: - Properties
@@ -61,6 +69,33 @@ class CommitCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configureCell(with viewModel: CommitViewModel) {
+        authorLabel.text = viewModel.author
+        hashLabel.text = viewModel.commitHash
+        commentLabel.text = viewModel.message
+        if let url = URL(string: viewModel.avatarUrl) {
+            profileImageView.load(url: url)
+        }
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+            
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.image = image
+                    }
+                }
+            } else {
+                self.image = UIImage(named: "userImage")
+            }
+        }
+    }
 }
 
 extension CommitCell: Constructible {
@@ -92,7 +127,6 @@ extension CommitCell: Constructible {
         ])
     }
 }
-
 
 extension UIView {
     func addSubViews(_ views: UIView...) {

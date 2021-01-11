@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CommitFacilitator {
-    func fetchAll(owner: String, repoName: String, completion: @escaping (Result<[CommitViewModel], Error>) -> Void)
+    func fetchAll(owner: String, repoName: String, completion: @escaping (Result<[CommitViewModel], CommitProviderError>) -> Void)
 }
 
 class CommitListFacilitator: CommitFacilitator {
@@ -19,7 +19,7 @@ class CommitListFacilitator: CommitFacilitator {
         self.provider = provider
     }
     
-    func fetchAll(owner: String, repoName: String, completion: @escaping (Result<[CommitViewModel], Error>) -> Void) {
+    func fetchAll(owner: String, repoName: String, completion: @escaping (Result<[CommitViewModel], CommitProviderError>) -> Void) {
         provider.fetchCommits(owner: owner, repoName: repoName) { (result) in
             switch result {
                 case .success( let data ):
@@ -41,10 +41,3 @@ class CommitListFacilitator: CommitFacilitator {
     }
 }
 
-struct CommitViewModel {
-    let avatarUrl: String
-    let commitHash: String
-    let author: String
-    let message: String
-    let commitUrl: String
-}
