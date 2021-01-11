@@ -13,6 +13,7 @@ class CommitListDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        
         return commitList.count
     }
     

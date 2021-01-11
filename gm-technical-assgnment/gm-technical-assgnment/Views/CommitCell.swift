@@ -23,7 +23,7 @@ class CommitCell: UICollectionViewCell {
     lazy var profileImageView : UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "userImage")
-        iv.layer.cornerRadius = 22.5    // ImageVeiw Radius / 2 = 22.5
+        iv.layer.cornerRadius = 25    // ImageVeiw Radius / 2 = 22.5
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -32,15 +32,17 @@ class CommitCell: UICollectionViewCell {
     
     let authorLabel : UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 12)
-        label.text = "JasperK"
+        label.font = UIFont(name: "ArialRoundedMTBold", size: 18)
+        label.textColor = .white
+        label.text = "Place Holder Name"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     } ()
     
     let hashLabel : UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 10)
+        label.font = .systemFont(ofSize: 11.5)
+        label.textColor = UIColor(red: 200/255, green: 200/255, blue: 199/255, alpha: 0.8)
         label.text = "534ff2dde69f29dbcd375cf26c48a19972e02ad0"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -48,12 +50,22 @@ class CommitCell: UICollectionViewCell {
     
     let commentLabel : UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12)
-        label.text = "First Comment made and what what what First Comment made and what what whaFirst Comment made and what what whaFirst Comment made and what what wha"
+        label.font = UIFont(name: "ArialRoundedMTBold", size: 13)
+        label.textColor = .white
+        label.text = "Placeholder comment"
         label.numberOfLines = 5
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    } ()
+    
+    lazy var stack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [authorLabel, hashLabel])
+        stack.axis = .vertical
+        stack.distribution = .equalSpacing
+        stack.spacing = 5
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
     } ()
     
     
@@ -84,29 +96,23 @@ class CommitCell: UICollectionViewCell {
 extension CommitCell: Constructible {
     
     func addSubViews() {
-        addSubViews(profileImageView, authorLabel, hashLabel, commentLabel)
+        addSubViews(profileImageView, stack, commentLabel)
     }
     
     func addConstraints() {
         NSLayoutConstraint.activate([
-            profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
-            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            profileImageView.widthAnchor.constraint(equalToConstant: 45),
-            profileImageView.heightAnchor.constraint(equalToConstant: 45),
+            profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 12),
+            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            profileImageView.widthAnchor.constraint(equalToConstant: 50),
+            profileImageView.heightAnchor.constraint(equalToConstant: 50),
             
-            authorLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 15),
-            authorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            authorLabel.topAnchor.constraint(equalTo: profileImageView.topAnchor),
-            authorLabel.heightAnchor.constraint(equalToConstant: 15),
-            
-            hashLabel.leadingAnchor.constraint(equalTo: authorLabel.leadingAnchor),
-            hashLabel.trailingAnchor.constraint(equalTo: authorLabel.trailingAnchor),
-            hashLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 5),
-            hashLabel.heightAnchor.constraint(equalToConstant: 15),
+            stack.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor),
+            stack.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 8),
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             
             commentLabel.leadingAnchor.constraint(equalTo: profileImageView.leadingAnchor),
             commentLabel.trailingAnchor.constraint(equalTo: hashLabel.trailingAnchor),
-            commentLabel.topAnchor.constraint(equalTo: centerYAnchor)
+            commentLabel.topAnchor.constraint(equalTo: centerYAnchor, constant: 13),
 
         ])
     }
