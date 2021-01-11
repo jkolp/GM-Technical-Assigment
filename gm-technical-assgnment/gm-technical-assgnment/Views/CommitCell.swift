@@ -55,15 +55,13 @@ class CommitCell: UICollectionViewCell {
     } ()
     
     
-    
     // MARK: - LifeCycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        layer.cornerRadius = 20
         addSubViews()
         addConstraints()
-        backgroundColor = .systemBlue
-        layer.cornerRadius = 20
     }
     
     required init?(coder: NSCoder) {

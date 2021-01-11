@@ -24,6 +24,7 @@
 		81A6B60525AC1136002A4967 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60425AC1136002A4967 /* UIView+Extensions.swift */; };
 		81A6B60825AC16B2002A4967 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60725AC16B2002A4967 /* LoadingView.swift */; };
 		81A6B60C25AC1F72002A4967 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60B25AC1F72002A4967 /* ConnectionManager.swift */; };
+		81A6B61325ACD54B002A4967 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B61225ACD54B002A4967 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		81A6B60425AC1136002A4967 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		81A6B60725AC16B2002A4967 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		81A6B60B25AC1F72002A4967 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		81A6B61225ACD54B002A4967 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				81A6B5FE25AC1072002A4967 /* UIImageView+Extensions.swift */,
 				81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */,
 				81A6B60425AC1136002A4967 /* UIView+Extensions.swift */,
+				81A6B61225ACD54B002A4967 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,
 				81A6B60C25AC1F72002A4967 /* ConnectionManager.swift in Sources */,
+				81A6B61325ACD54B002A4967 /* UIColor+Extensions.swift in Sources */,
 				81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */,
 				81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */,
 				81434C3D25AA7E1A009A965B /* CommitCell.swift in Sources */,
