@@ -19,6 +19,9 @@
 		81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */; };
 		81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5F425AAC01F002A4967 /* CommitProvider.swift */; };
 		81A6B5F925AAD3EB002A4967 /* CommitFacilitator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5F825AAD3EB002A4967 /* CommitFacilitator.swift */; };
+		81A6B5FF25AC1073002A4967 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5FE25AC1072002A4967 /* UIImageView+Extensions.swift */; };
+		81A6B60225AC10D5002A4967 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */; };
+		81A6B60525AC1136002A4967 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60425AC1136002A4967 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		81A6B5EE25AAAC3C002A4967 /* CommitListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListDataSource.swift; sourceTree = "<group>"; };
 		81A6B5F425AAC01F002A4967 /* CommitProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitProvider.swift; sourceTree = "<group>"; };
 		81A6B5F825AAD3EB002A4967 /* CommitFacilitator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitFacilitator.swift; sourceTree = "<group>"; };
+		81A6B5FE25AC1072002A4967 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		81A6B60425AC1136002A4967 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		8160A01E25AA294D0018F81C /* gm-technical-assgnment */ = {
 			isa = PBXGroup;
 			children = (
+				81A6B5FD25AC1045002A4967 /* Extensions */,
 				81A6B5F325AABFCC002A4967 /* Provider */,
 				81A6B5F225AABFBE002A4967 /* Facilitator */,
 				8160A01F25AA294D0018F81C /* AppDelegate.swift */,
@@ -123,6 +130,16 @@
 				81A6B5F425AAC01F002A4967 /* CommitProvider.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		81A6B5FD25AC1045002A4967 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81A6B5FE25AC1072002A4967 /* UIImageView+Extensions.swift */,
+				81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */,
+				81A6B60425AC1136002A4967 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +213,10 @@
 			files = (
 				8160A02425AA294D0018F81C /* CommitListViewController.swift in Sources */,
 				8160A04225AA78960018F81C /* Constructible.swift in Sources */,
+				81A6B5FF25AC1073002A4967 /* UIImageView+Extensions.swift in Sources */,
 				8160A03825AA32510018F81C /* BaseViewController.swift in Sources */,
+				81A6B60225AC10D5002A4967 /* UIViewController+Extensions.swift in Sources */,
+				81A6B60525AC1136002A4967 /* UIView+Extensions.swift in Sources */,
 				81A6B5F925AAD3EB002A4967 /* CommitFacilitator.swift in Sources */,
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,

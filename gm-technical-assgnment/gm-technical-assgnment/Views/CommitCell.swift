@@ -80,24 +80,6 @@ class CommitCell: UICollectionViewCell {
     }
 }
 
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            guard let self = self else { return }
-            
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self.image = image
-                    }
-                }
-            } else {
-                self.image = UIImage(named: "userImage")
-            }
-        }
-    }
-}
-
 extension CommitCell: Constructible {
     func addSubViews() {
         addSubViews(profileImageView, authorLabel, hashLabel, commentLabel)
@@ -128,8 +110,3 @@ extension CommitCell: Constructible {
     }
 }
 
-extension UIView {
-    func addSubViews(_ views: UIView...) {
-        views.forEach { addSubview($0) }
-    }
-}

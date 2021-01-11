@@ -72,19 +72,6 @@ extension CommitListViewController {
     }
 }
 
-#warning("TODO")
-// TODO : Move this extension to the Extensions file
-extension UIViewController {
-    
-    func showAlert(with title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
-}
-
-
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension CommitListViewController: UICollectionViewDelegateFlowLayout {
