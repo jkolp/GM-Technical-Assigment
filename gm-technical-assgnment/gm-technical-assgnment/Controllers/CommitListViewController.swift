@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol DataRefreshing {
+    var collectionView: UICollectionView { get }
+    func refresh()
+}
+
 class CommitListViewController: BaseViewController<CommitListView> {
 
     // MARK: - Properties
@@ -38,6 +43,10 @@ class CommitListViewController: BaseViewController<CommitListView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCommits()
+        baseView.refreshAction = { [weak self] in
+            guard let self = self else { return }
+            self.refresh()
+        }
     }
 }
 
@@ -54,6 +63,7 @@ extension CommitListViewController {
                     self.commitListDataSource.setCommits(with: commits)
                     DispatchQueue.main.async {
                         self.baseView.collectionView.reloadData()
+                        self.baseView.collectionView.refreshControl?.endRefreshing()
                     }
                 case .failure( let error ) :
                     self.showAlert(with: "Oops!", message: error.localizedDescription)
@@ -85,5 +95,17 @@ extension CommitListViewController: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: width, height: height)
         
+    }
+}
+
+// MARK: - DataRefreshing
+
+extension CommitListViewController: DataRefreshing {
+    var collectionView: UICollectionView {
+        return baseView.collectionView
+    }
+    
+    func refresh() {
+        fetchCommits()
     }
 }

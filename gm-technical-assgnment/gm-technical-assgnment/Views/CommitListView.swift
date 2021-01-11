@@ -12,6 +12,14 @@ class CommitListView: UIView {
     
     // MARK: - Properties
     
+    var refreshAction: (() -> Void)?
+    
+    let refresh : UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        return control
+    } ()
+    
     let collectionView : UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         cv.backgroundColor = .white
@@ -22,19 +30,25 @@ class CommitListView: UIView {
         return cv
     } ()
     
-    
     // MARK: - LifeCycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubViews()
         addConstraints()
+        collectionView.refreshControl = refresh
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+ 
     
+    // MARK: - Action
+        
+    @objc func handleRefresh() {
+        refreshAction?()
+    }
 }
 
 // MARK: - UI Setup
