@@ -34,6 +34,7 @@ class CommitListView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
         addSubViews()
         addConstraints()
         collectionView.refreshControl = refresh
@@ -60,7 +61,7 @@ extension CommitListView: Constructible {
     }
     
     func addConstraints() {
-        NSLayoutConstraint.activate([collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+        NSLayoutConstraint.activate([collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
                                      collectionView.leftAnchor.constraint(equalTo: leftAnchor),
                                      collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
                                      collectionView.rightAnchor.constraint(equalTo: rightAnchor)])

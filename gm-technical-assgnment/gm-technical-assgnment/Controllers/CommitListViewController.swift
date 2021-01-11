@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum CommitListViewControllerState {
+    case loading
+    case loaded
+}
+
 protocol DataRefreshing {
     var collectionView: UICollectionView { get }
     func refresh()
@@ -17,7 +22,10 @@ class CommitListViewController: BaseViewController<CommitListView> {
     // MARK: - Properties
     private let commitListDataSource: CommitListDataSource
     private let commitListFacilitator: CommitListFacilitator
-    
+    private var state: CommitListViewControllerState! {
+        didSet { handleState() }
+    }
+    private let loadingView = LoadingView()
     
     // MARK: - LifeCycle
     
@@ -42,11 +50,38 @@ class CommitListViewController: BaseViewController<CommitListView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchCommits()
         baseView.refreshAction = { [weak self] in
             guard let self = self else { return }
             self.refresh()
         }
+    }
+    
+    // MARK: - Helpers
+    
+    func handleState() {
+        
+        switch state {
+            case .loading : addLoadingView()
+            case .loaded : removeLoadingView()
+            default: return
+        }
+        
+
+    }
+    
+    func addLoadingView() {
+        view.addSubview(loadingView)
+        NSLayoutConstraint.activate([
+                                        loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                                        loadingView.topAnchor.constraint(equalTo: view.topAnchor),
+                                        loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                                        loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor)])
+    }
+    
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
     }
 }
 
@@ -55,6 +90,8 @@ class CommitListViewController: BaseViewController<CommitListView> {
 extension CommitListViewController {
     
     func fetchCommits() {
+        state = .loading
+        
         commitListFacilitator.fetchAll(owner: "jkolp", repoName: "GM-Technical-Assigment") { [weak self] (result) in
             guard let self = self else { return }
             
@@ -62,6 +99,7 @@ extension CommitListViewController {
                 case .success( let commits ) :
                     self.commitListDataSource.setCommits(with: commits)
                     DispatchQueue.main.async {
+                        self.state = .loaded
                         self.baseView.collectionView.reloadData()
                         self.baseView.collectionView.refreshControl?.endRefreshing()
                     }

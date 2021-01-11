@@ -22,6 +22,7 @@
 		81A6B5FF25AC1073002A4967 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B5FE25AC1072002A4967 /* UIImageView+Extensions.swift */; };
 		81A6B60225AC10D5002A4967 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */; };
 		81A6B60525AC1136002A4967 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60425AC1136002A4967 /* UIView+Extensions.swift */; };
+		81A6B60825AC16B2002A4967 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60725AC16B2002A4967 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		81A6B5FE25AC1072002A4967 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		81A6B60425AC1136002A4967 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		81A6B60725AC16B2002A4967 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				8160A03E25AA375E0018F81C /* CommitListView.swift */,
 				81434C3C25AA7E1A009A965B /* CommitCell.swift */,
+				81A6B60725AC16B2002A4967 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				81A6B5FF25AC1073002A4967 /* UIImageView+Extensions.swift in Sources */,
 				8160A03825AA32510018F81C /* BaseViewController.swift in Sources */,
 				81A6B60225AC10D5002A4967 /* UIViewController+Extensions.swift in Sources */,
+				81A6B60825AC16B2002A4967 /* LoadingView.swift in Sources */,
 				81A6B60525AC1136002A4967 /* UIView+Extensions.swift in Sources */,
 				81A6B5F925AAD3EB002A4967 /* CommitFacilitator.swift in Sources */,
 				8160A03F25AA375E0018F81C /* CommitListView.swift in Sources */,
