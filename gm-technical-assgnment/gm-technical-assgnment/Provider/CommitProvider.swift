@@ -8,9 +8,10 @@
 import Foundation
 
 enum CommitProviderError: String, Error {
-    case server
-    case noInternet
-    case badUrl
+    case server = "Server error"
+    case noInternet = "Internet connection is too slow..."
+    case badUrl = "Bad repository URL"
+    case noResult = "No commits were found in this repository"
 }
 
 struct Commit: Decodable {
@@ -61,7 +62,12 @@ class CommitListProvider: CommitProvider {
                 
                 do {
                     let results = try decoder.decode([CommitProviderPayload].self, from: data)
-                    completion(.success(results))
+                    
+                    if results.count == 0 {
+                        completion(.failure(.noResult))
+                    } else {
+                        completion(.success(results))
+                    }
                     
                 } catch {
                     completion(.failure(.server))
