@@ -66,7 +66,7 @@ class CommitListViewController: BaseViewController<CommitListView> {
             case .loading : addLoadingView()
             case .loaded( let error ) :
                 if let error = error {
-                    self.showAlert(with: "Oops!", message: error.localizedDescription)
+                    self.showAlert(with: "Oops!", message: error.rawValue)
                 }
                 removeLoadingView()
             
