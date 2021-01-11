@@ -44,6 +44,11 @@ class CommitListProvider: CommitProvider {
     func fetchCommits(owner: String, repoName: String, completion: @escaping (Result<[CommitProviderPayload], CommitProviderError>) -> Void) {
         
         
+        if !ConnectionManager.shared.isReachable(reachability: ConnectionManager.reachable!) {
+            completion(.failure(.noInternet))
+            return
+        }
+        
         guard let url = URL(string: "\(baseURL)/repos/\(owner)/\(repoName)/commits") else {
             completion(.failure(.badUrl))
             return

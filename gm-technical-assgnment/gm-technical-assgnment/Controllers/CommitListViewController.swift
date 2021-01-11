@@ -9,7 +9,7 @@ import UIKit
 
 enum CommitListViewControllerState {
     case loading
-    case loaded
+    case loaded ( CommitProviderError? )
 }
 
 protocol DataRefreshing {
@@ -64,11 +64,14 @@ class CommitListViewController: BaseViewController<CommitListView> {
         
         switch state {
             case .loading : addLoadingView()
-            case .loaded : removeLoadingView()
+            case .loaded( let error ) :
+                if let error = error {
+                    self.showAlert(with: "Oops!", message: error.localizedDescription)
+                }
+                removeLoadingView()
+            
             default: return
         }
-        
-
     }
     
     func addLoadingView() {
@@ -81,6 +84,7 @@ class CommitListViewController: BaseViewController<CommitListView> {
     }
     
     func removeLoadingView() {
+        
         loadingView.removeFromSuperview()
     }
 }
@@ -99,12 +103,12 @@ extension CommitListViewController {
                 case .success( let commits ) :
                     self.commitListDataSource.setCommits(with: commits)
                     DispatchQueue.main.async {
-                        self.state = .loaded
+                        self.state = .loaded(nil)
                         self.baseView.collectionView.reloadData()
                         self.baseView.collectionView.refreshControl?.endRefreshing()
                     }
                 case .failure( let error ) :
-                    self.showAlert(with: "Oops!", message: error.localizedDescription)
+                    self.state = .loaded( error )
             }
         }
     }
