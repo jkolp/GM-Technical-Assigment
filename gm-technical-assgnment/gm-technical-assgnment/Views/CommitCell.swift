@@ -20,10 +20,12 @@ class CommitCell: UICollectionViewCell {
     // MARK: - Properties
     static public let cellIdentifier = "CommitCell"
     
-    let profileImageView : UIImageView = {
+    lazy var profileImageView : UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "userImage")
+        iv.layer.cornerRadius = 22.5    // ImageVeiw Radius / 2 = 22.5
         iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     } ()
@@ -69,6 +71,7 @@ class CommitCell: UICollectionViewCell {
     }
     
     func configureCell(with viewModel: CommitViewModel) {
+
         authorLabel.text = viewModel.author
         hashLabel.text = viewModel.commitHash
         commentLabel.text = viewModel.message
@@ -79,6 +82,7 @@ class CommitCell: UICollectionViewCell {
 }
 
 extension CommitCell: Constructible {
+    
     func addSubViews() {
         addSubViews(profileImageView, authorLabel, hashLabel, commentLabel)
     }
