@@ -15,7 +15,7 @@ Take home project assigned by GM.
 
 ## Screenshots
 
-![main](Documentation/home.png)
+![main](Documents/home.png)
 
 
 ### TO-DO
