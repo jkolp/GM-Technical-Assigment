@@ -73,7 +73,9 @@ class CommitCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.cornerRadius = 20
+
+        addGradientBackGroundColor()
+        dropShadow()
         addSubViews()
         addConstraints()
     }
@@ -81,6 +83,7 @@ class CommitCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func configureCell(with viewModel: CommitViewModel) {
 
@@ -90,7 +93,17 @@ class CommitCell: UICollectionViewCell {
         if let url = URL(string: viewModel.avatarUrl) {
             profileImageView.load(url: url)
         }
+        
     }
+    
+    func addGradientBackGroundColor() {
+        // From UIView extension
+        addGradientBackground(firstColor: UIColor(red: 1/255, green: 99/255, blue: 206/255, alpha: 1), secondColor: UIColor(red: 3/255, green: 172/255, blue: 198/255, alpha: 1))
+    }
+    
+    
+    
+
 }
 
 extension CommitCell: Constructible {

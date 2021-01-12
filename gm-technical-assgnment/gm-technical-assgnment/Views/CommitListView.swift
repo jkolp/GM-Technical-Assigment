@@ -28,7 +28,8 @@ class CommitListView: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(CommitCell.self, forCellWithReuseIdentifier: CommitCell.cellIdentifier)
         cv.register(CommitListViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CommitListViewHeader.reuseIdentifier)
-        
+        let layout = cv.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.sectionHeadersPinToVisibleBounds = true
         return cv
     } ()
     

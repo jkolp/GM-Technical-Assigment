@@ -23,4 +23,13 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    func dropShadow() {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 0.0, height: 3)
+        layer.shadowRadius = 3
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale 
+    }
 }
