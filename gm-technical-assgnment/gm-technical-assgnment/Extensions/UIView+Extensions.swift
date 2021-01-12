@@ -23,13 +23,18 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func dropShadow() {
+    func glassMorphism() {
+        clipsToBounds = true
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = []
+    }
+    
+    func dropShadow(_ contentView: UIView) {
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 5.0)
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 2
         layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 0.0, height: 3)
-        layer.shadowRadius = 3
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale 
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
     }
 }

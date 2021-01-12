@@ -75,7 +75,8 @@ class CommitCell: UICollectionViewCell {
         super.init(frame: frame)
 
         addGradientBackGroundColor()
-        dropShadow()
+        roundCorner()
+        dropShadow(contentView)
         addSubViews()
         addConstraints()
     }
@@ -96,16 +97,24 @@ class CommitCell: UICollectionViewCell {
         
     }
     
+    func roundCorner() {
+        contentView.layer.cornerRadius = 13
+        contentView.layer.borderWidth = 1.0
+        contentView.layer.borderColor = UIColor.clear.cgColor
+        contentView.layer.masksToBounds = true
+    }
+    
     func addGradientBackGroundColor() {
         // From UIView extension
-        addGradientBackground(firstColor: UIColor(red: 1/255, green: 99/255, blue: 206/255, alpha: 1), secondColor: UIColor(red: 3/255, green: 172/255, blue: 198/255, alpha: 1))
+        contentView.addGradientBackground(firstColor: UIColor(red: 1/255, green: 99/255, blue: 206/255, alpha: 1), secondColor: UIColor(red: 3/255, green: 172/255, blue: 198/255, alpha: 1))
     }
 }
 
 extension CommitCell: Constructible {
     
     func addSubViews() {
-        addSubViews(profileImageView, stack, commentLabel)
+        contentView.addSubViews(profileImageView, stack, commentLabel)
+        //addSubViews(profileImageView, stack, commentLabel)
     }
     
     func addConstraints() {
