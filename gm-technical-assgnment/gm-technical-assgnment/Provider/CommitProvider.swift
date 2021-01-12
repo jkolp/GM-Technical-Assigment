@@ -67,7 +67,7 @@ class CommitListProvider: CommitProvider {
                 
                 do {
                     let results = try decoder.decode([CommitProviderPayload].self, from: data)
-                    
+
                     if results.count == 0 {
                         completion(.failure(.noResult))
                     } else {

@@ -69,7 +69,9 @@ class CommitListViewController: BaseViewController<CommitListView> {
             case .loading : addLoadingView()
             case .loaded( let error ) :
                 if let error = error {
-                    self.showAlert(with: "Oops!", message: error.rawValue)
+                    DispatchQueue.main.async {
+                        self.showAlert(with: "Oops!", message: error.rawValue)
+                    }
                 }
                 removeLoadingView()
             
@@ -87,8 +89,9 @@ class CommitListViewController: BaseViewController<CommitListView> {
     }
     
     func removeLoadingView() {
-        
-        loadingView.removeFromSuperview()
+        DispatchQueue.main.async {
+            self.loadingView.removeFromSuperview()
+        }
     }
 }
 
@@ -99,7 +102,7 @@ extension CommitListViewController {
     func fetchCommits() {
         state = .loading
         
-        commitListFacilitator.fetchAll(owner: "jkolp", repoName: "GM-Technical-Assigment") { [weak self] (result) in
+        commitListFacilitator.fetchAll(owner: "jkolp", repoName: "GM-Technical-Assignment") { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {

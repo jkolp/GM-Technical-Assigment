@@ -100,10 +100,6 @@ class CommitCell: UICollectionViewCell {
         // From UIView extension
         addGradientBackground(firstColor: UIColor(red: 1/255, green: 99/255, blue: 206/255, alpha: 1), secondColor: UIColor(red: 3/255, green: 172/255, blue: 198/255, alpha: 1))
     }
-    
-    
-    
-
 }
 
 extension CommitCell: Constructible {
