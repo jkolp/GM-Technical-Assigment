@@ -137,7 +137,7 @@ extension CommitListViewController: UICollectionViewDelegateFlowLayout {
         let height = view.frame.height / 8
         let width = view.frame.width
         
-        return CGSize(width: view.frame.width, height: height)
+        return CGSize(width: width, height: height)
     }
 }
 

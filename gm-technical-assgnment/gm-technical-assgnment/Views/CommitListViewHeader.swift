@@ -19,8 +19,8 @@ class CommitListViewHeader: UICollectionReusableView {
         logo.contentMode = .scaleAspectFill
         logo.clipsToBounds = true
         logo.translatesAutoresizingMaskIntoConstraints = false
-        logo.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        logo.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        logo.heightAnchor.constraint(equalToConstant: 110).isActive = true
+        logo.widthAnchor.constraint(equalToConstant: 110).isActive = true
         return logo
     } ()
     
@@ -36,6 +36,8 @@ class CommitListViewHeader: UICollectionReusableView {
     lazy var stack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [gmLogo, titleLabel])
         stack.axis = .horizontal
+        stack.distribution = .fill
+        stack.spacing = -10
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     } ()
