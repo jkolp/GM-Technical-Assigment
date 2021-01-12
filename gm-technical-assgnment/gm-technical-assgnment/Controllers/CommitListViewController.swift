@@ -42,7 +42,10 @@ class CommitListViewController: BaseViewController<CommitListView> {
     
     override func loadView() {
         view = baseView
-        title = "GM Technical Assignment"
+        
+        let gmLogo = UIImage(named: "gmLogo")?.resized(to: CGSize(width: 50.0, height: 50.0))
+        navigationItem.titleView = UIImageView(image: gmLogo)
+        navigationController?.navigationBar.backgroundColor = .clear
         
         baseView.collectionView.dataSource = commitListDataSource
         baseView.collectionView.delegate = self
@@ -124,6 +127,14 @@ extension CommitListViewController: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: width, height: height)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        // size of header
+        let height = view.frame.height / 8
+        let width = view.frame.width
+        
+        return CGSize(width: view.frame.width, height: height)
     }
 }
 

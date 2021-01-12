@@ -112,7 +112,7 @@ extension CommitCell: Constructible {
             
             commentLabel.leadingAnchor.constraint(equalTo: profileImageView.leadingAnchor),
             commentLabel.trailingAnchor.constraint(equalTo: hashLabel.trailingAnchor),
-            commentLabel.topAnchor.constraint(equalTo: centerYAnchor, constant: 13),
+            commentLabel.topAnchor.constraint(equalTo: centerYAnchor, constant: 13)
 
         ])
     }

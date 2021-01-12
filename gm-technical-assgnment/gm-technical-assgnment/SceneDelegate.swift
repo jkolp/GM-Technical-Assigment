@@ -19,11 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: scene)
-        let navController = UINavigationController(rootViewController:
-                                                    CommitListViewController(
-                                                        commitListDataSource: CommitListDataSource(),
-                                                        commitListFacilitator: CommitListFacilitator(provider: CommitListProvider())))
-        window?.rootViewController = navController
+        window?.rootViewController = CommitListViewController(commitListDataSource: CommitListDataSource(),
+                                                              commitListFacilitator: CommitListFacilitator(provider: CommitListProvider()))
         window?.makeKeyAndVisible()
     }
 

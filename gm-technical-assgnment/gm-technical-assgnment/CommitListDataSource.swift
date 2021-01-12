@@ -25,6 +25,12 @@ class CommitListDataSource: NSObject, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CommitListViewHeader.reuseIdentifier, for: indexPath) as! CommitListViewHeader
+        
+        return header
+    }
+    
     func setCommits(with list: [CommitViewModel]) {
         commitList = list
     }

@@ -14,6 +14,7 @@ class CommitListView: UIView {
     
     var refreshAction: (() -> Void)?
     
+    
     let refresh : UIRefreshControl = {
         let control = UIRefreshControl()
         control.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
@@ -26,6 +27,7 @@ class CommitListView: UIView {
         cv.alwaysBounceVertical = true
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(CommitCell.self, forCellWithReuseIdentifier: CommitCell.cellIdentifier)
+        cv.register(CommitListViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CommitListViewHeader.reuseIdentifier)
         
         return cv
     } ()
@@ -61,7 +63,7 @@ extension CommitListView: Constructible {
     }
     
     func addConstraints() {
-        NSLayoutConstraint.activate([collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+        NSLayoutConstraint.activate([collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
                                      collectionView.leftAnchor.constraint(equalTo: leftAnchor),
                                      collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
                                      collectionView.rightAnchor.constraint(equalTo: rightAnchor)])

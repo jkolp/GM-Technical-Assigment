@@ -25,6 +25,8 @@
 		81A6B60825AC16B2002A4967 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60725AC16B2002A4967 /* LoadingView.swift */; };
 		81A6B60C25AC1F72002A4967 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B60B25AC1F72002A4967 /* ConnectionManager.swift */; };
 		81A6B61325ACD54B002A4967 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B61225ACD54B002A4967 /* UIColor+Extensions.swift */; };
+		81B02C6325AD30AF00438F0C /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B02C6225AD30AF00438F0C /* UIImage+Extensions.swift */; };
+		81B02C6625AD32B100438F0C /* CommitListViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B02C6525AD32B100438F0C /* CommitListViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		81A6B60725AC16B2002A4967 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		81A6B60B25AC1F72002A4967 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		81A6B61225ACD54B002A4967 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		81B02C6225AD30AF00438F0C /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		81B02C6525AD32B100438F0C /* CommitListViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				8160A03E25AA375E0018F81C /* CommitListView.swift */,
 				81434C3C25AA7E1A009A965B /* CommitCell.swift */,
 				81A6B60725AC16B2002A4967 /* LoadingView.swift */,
+				81B02C6525AD32B100438F0C /* CommitListViewHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				81A6B60125AC10D5002A4967 /* UIViewController+Extensions.swift */,
 				81A6B60425AC1136002A4967 /* UIView+Extensions.swift */,
 				81A6B61225ACD54B002A4967 /* UIColor+Extensions.swift */,
+				81B02C6225AD30AF00438F0C /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,8 +238,10 @@
 				8160A02025AA294D0018F81C /* AppDelegate.swift in Sources */,
 				81A6B60C25AC1F72002A4967 /* ConnectionManager.swift in Sources */,
 				81A6B61325ACD54B002A4967 /* UIColor+Extensions.swift in Sources */,
+				81B02C6625AD32B100438F0C /* CommitListViewHeader.swift in Sources */,
 				81A6B5F525AAC01F002A4967 /* CommitProvider.swift in Sources */,
 				81A6B5EF25AAAC3C002A4967 /* CommitListDataSource.swift in Sources */,
+				81B02C6325AD30AF00438F0C /* UIImage+Extensions.swift in Sources */,
 				81434C3D25AA7E1A009A965B /* CommitCell.swift in Sources */,
 				8160A02225AA294D0018F81C /* SceneDelegate.swift in Sources */,
 			);
